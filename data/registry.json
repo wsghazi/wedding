@@ -1,0 +1,36 @@
+{
+  "couple": "The Ghazi Wedding",
+  "date": "January 9, 2027",
+  "intro": "Your presence is the best gift. If you'd like to give something more, here is everything we've registered for, all in one place. Mark a gift as bought so nobody doubles up.",
+
+  "stores": [
+    { "id": "williams-sonoma", "name": "Williams Sonoma", "url": "https://www.williams-sonoma.com/registry/" },
+    { "id": "macys",           "name": "Macy's",          "url": "https://www.macys.com/registry/" },
+    { "id": "bbb",             "name": "Bed Bath & Beyond", "url": "https://www.bedbathandbeyond.com/" },
+    { "id": "other",           "name": "Other shops",     "url": "" }
+  ],
+
+  "funds": [
+    { "name": "Honeymoon fund", "note": "Help us get there and splurge a little.", "venmo": "https://venmo.com/u/YOUR-HANDLE", "paypal": "https://paypal.me/YOUR-HANDLE" },
+    { "name": "First home fund", "note": "Saving up for a place of our own.",      "venmo": "https://venmo.com/u/YOUR-HANDLE", "paypal": "" }
+  ],
+
+  "items": [
+    { "name": "Stand mixer, 5 qt",              "price": 449, "store": "williams-sonoma", "url": "https://www.williams-sonoma.com/", "image": "" },
+    { "name": "Enameled Dutch oven, 5.5 qt",    "price": 420, "store": "williams-sonoma", "url": "https://www.williams-sonoma.com/", "image": "" },
+    { "name": "Chef's knife, 8 in",             "price": 160, "store": "williams-sonoma", "url": "https://www.williams-sonoma.com/", "image": "" },
+    { "name": "Dinner plates, set of 4",        "price": 80,  "store": "macys", "url": "https://www.macys.com/", "image": "", "qty": 3 },
+    { "name": "Crystal wine glasses, set of 4", "price": 120, "store": "macys", "url": "https://www.macys.com/", "image": "", "qty": 2 },
+    { "name": "Bath towel set",                 "price": 95,  "store": "macys", "url": "https://www.macys.com/", "image": "" },
+    { "name": "Sateen sheet set, queen",        "price": 130, "store": "bbb", "url": "https://www.bedbathandbeyond.com/", "image": "" },
+    { "name": "Robot vacuum",                   "price": 299, "store": "bbb", "url": "https://www.bedbathandbeyond.com/", "image": "" },
+    { "name": "Espresso machine",               "price": 699, "store": "other", "url": "https://example.com/", "image": "" },
+    { "name": "Cast iron skillet, 12 in",       "price": 45,  "store": "other", "url": "https://example.com/", "image": "" }
+  ],
+
+  "claims": {
+    "backend": "local",
+    "firebaseUrl": "https://YOUR-PROJECT-default-rtdb.firebaseio.com",
+    "appsScriptUrl": "https://script.google.com/macros/s/YOUR-DEPLOYMENT-ID/exec"
+  }
+}

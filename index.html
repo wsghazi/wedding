@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wedding Registry</title>
+  <meta name="description" content="All of our wedding registries in one place.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Wedding registry</p>
+    <h1 id="couple">Our Wedding</h1>
+    <p class="date" id="date"></p>
+    <p class="intro" id="intro"></p>
+  </header>
+
+  <main>
+    <section aria-labelledby="stores-h">
+      <h2 id="stores-h">Our registries</h2>
+      <p class="section-note">Prefer to shop a store's registry directly? Start here.</p>
+      <div class="stores" id="stores"></div>
+    </section>
+
+    <section aria-labelledby="gifts-h">
+      <h2 id="gifts-h">Gifts</h2>
+      <p class="section-note">Each <strong>Buy</strong> button opens the store's product page in a new tab. After you order, come back and tap <strong>I bought this</strong> so nobody buys the same thing twice.</p>
+
+      <div class="toolbar" role="group" aria-label="Filter gifts">
+        <div class="chips" id="store-filter"></div>
+        <div class="toolbar-right">
+          <label class="check"><input type="checkbox" id="hide-claimed"> Hide gifted</label>
+          <select id="sort" aria-label="Sort gifts">
+            <option value="default">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="status" id="status" role="status"></p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section aria-labelledby="funds-h" id="funds-section" hidden>
+      <h2 id="funds-h">Cash funds</h2>
+      <p class="section-note">If you'd rather give toward an experience, these go straight to us.</p>
+      <div class="funds" id="funds"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with love. Questions? Just ask us.</p>
+  </footer>
+
+  <dialog id="claim-dialog">
+    <form method="dialog" id="claim-form">
+      <h3>Mark as bought</h3>
+      <p id="claim-item" class="dialog-item"></p>
+      <label for="claim-name">Your name <span class="muted">(optional, so we can thank you)</span></label>
+      <input id="claim-name" name="name" autocomplete="name" maxlength="80" placeholder="e.g. Aunt Rania">
+      <p class="muted small">This marks the gift as taken for everyone. You can undo it from this device.</p>
+      <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="claim-cancel">Cancel</button>
+        <button type="submit" class="btn primary" id="claim-confirm">Yes, I bought it</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

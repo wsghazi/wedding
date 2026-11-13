@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "claims": {
+      ".read": true,
+      "$itemId": {
+        "$claimId": {
+          ".write": "!data.exists() || !newData.exists()",
+          ".validate": "!newData.exists() || (newData.hasChildren(['at']) && newData.child('at').isNumber() && (!newData.child('name').exists() || (newData.child('name').isString() && newData.child('name').val().length <= 80)))",
+          "name": { ".validate": true },
+          "at": { ".validate": true },
+          "$other": { ".validate": false }
+        }
+      }
+    }
+  }
+}
